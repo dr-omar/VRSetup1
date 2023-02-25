@@ -17,6 +17,15 @@ public class MouseLooker3 : MonoBehaviour {
 		// rotate stuff based on the mouse
 		LookRotation ();
 
+		if (GameManager.gm)
+		{
+			if (GameManager.gm.gameIsOver)
+			{
+				LockCursor(false);
+				return;
+			}
+		}
+
 		// if ESCAPE key is pressed, then unlock the cursor
 		if(Input.GetButtonDown("Cancel")){
 			LockCursor (false);
@@ -36,7 +45,7 @@ public class MouseLooker3 : MonoBehaviour {
 			Cursor.visible = false;
 
 			// lock the mouse pointer within the game area
-			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.lockState = CursorLockMode.None;
 		} else {
 			// make the mouse pointer visible
 			Cursor.visible = true;
@@ -54,9 +63,9 @@ public class MouseLooker3 : MonoBehaviour {
 		}
 		else YSensitivity = 0;
 		*/
-		if (Input.GetKey (KeyCode.Escape)) {
-			SceneManager.LoadScene ("MainMenu");
-		}
+		//if (Input.GetKey (KeyCode.Escape)) {
+			//SceneManager.LoadScene ("MainMenu");
+		//}
 		//get the y and x rotation based on the Input manager
 		float yRot = Input.GetAxis("Mouse X") * XSensitivity;
 		float xRot = Input.GetAxis("Mouse Y") * YSensitivity;

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.InputSystem;
 
 public class Shooter : MonoBehaviour {
 
@@ -11,11 +12,16 @@ public class Shooter : MonoBehaviour {
 	public AudioClip shootSFX;
 	
 	// Update is called once per frame
-	void Update () {
+	public void Fire (InputAction.CallbackContext context) {
 		// Detect if fire button is pressed
-		if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
-		{	
-			// if projectile is specified
+		//if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
+		//{
+		if (GameManager.gm)
+		{
+			if (GameManager.gm.gameIsOver) return;
+		}
+		if (context.performed) {	
+		// if projectile is specified
 			if (projectile)
 			{
 				// Instantiante projectile at the camera + 1 meter forward with camera rotation

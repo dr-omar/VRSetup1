@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerControllerTransform : MonoBehaviour {
+public class LearnCrystalPlayerController : MonoBehaviour {
 
     Vector2 MoveAxis;
     public float playerSpeed = 2f;
@@ -32,7 +32,7 @@ public class PlayerControllerTransform : MonoBehaviour {
         {
             gameObject.transform.Rotate(0, playerRotation * Time.deltaTime, 0);
         }
-
+        
         Vector3 moveDirection = new Vector3(0, 0, inputZ);
         moveDirection = transform.TransformDirection(moveDirection);
         moveDirection *= playerSpeed;

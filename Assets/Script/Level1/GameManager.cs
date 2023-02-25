@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
 using TMPro;
+///using UnityEngine.XR.Interaction.Toolkit;
+///using Unity.XR.CoreUtils;
 
 public class GameManager : MonoBehaviour {
 
@@ -37,6 +39,10 @@ public class GameManager : MonoBehaviour {
 
     int currentQIndex = 0;
     public TextMeshProUGUI Question;
+	public GameObject CrossHair;
+	public GameObject ScoreBoard;
+	//public GameObject XROrigin;
+	//public LeftHandRayContrller leftHandRayContrller;
 
 	// setup the game
 	void Start () {
@@ -55,13 +61,21 @@ public class GameManager : MonoBehaviour {
 		if (gameOverScoreOutline)
 			gameOverScoreOutline.SetActive (false);
 
+		//leftHandRayContrller.GetComponent<XRInteractorLineVisual>().SetActive(false);
+		/*
+		GameObject left = XROrigin.FindWithTag("LeftHandRayContrller");
+		if (left != null)
+        {
+			XRInteractorLineVisual left_script = left.GetComponent<XRInteractorLineVisual>();
+        }
+		*/
 		// inactivate the playAgainButtons gameObject, if it is set
-		if (playAgainButtons)
-			playAgainButtons.SetActive (false);
+		//if (playAgainButtons)
+			//playAgainButtons.SetActive (false);
 
 		// inactivate the nextLevelButtons gameObject, if it is set
-		if (nextLevelButtons)
-			nextLevelButtons.SetActive (false);
+		//if (nextLevelButtons)
+			//nextLevelButtons.SetActive (false);
         DateTime epochStart = new DateTime(2010, 1, 1, 0, 0, 0, DateTimeKind.Utc);
         int currentEpochTime = (int)(DateTime.UtcNow - epochStart).TotalSeconds;
         UnityEngine.Random.InitState (currentEpochTime);
@@ -102,15 +116,21 @@ public class GameManager : MonoBehaviour {
 		gameIsOver = true;
 
 		// repurpose the timer to display a message to the player
-		mainTimerDisplay.text = "GAME OVER";
+		//mainTimerDisplay.text = "GAME OVER";
 
 		// activate the gameOverScoreOutline gameObject, if it is set 
 		if (gameOverScoreOutline)
-			gameOverScoreOutline.SetActive (true);
-	
+		{
+			gameOverScoreOutline.SetActive(true);
+			CrossHair.SetActive(false);
+			ScoreBoard.SetActive(false);
+
+		}
+		//leftHandRayContrller.GetComponent<XRInteractorLineVisual>().SetActive(false);
+
 		// activate the playAgainButtons gameObject, if it is set 
-		if (playAgainButtons)
-			playAgainButtons.SetActive (true);
+		//if (playAgainButtons)
+		//playAgainButtons.SetActive (true);
 
 		// reduce the pitch of the background music, if it is set 
 		if (musicAudioSource)

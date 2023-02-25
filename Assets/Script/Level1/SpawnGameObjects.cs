@@ -41,7 +41,7 @@ public class SpawnGameObjects : MonoBehaviour
 	{
 		Vector3 spawnPosition;
 
-		spawnPosition = new Vector3 (-30, 3, 40);
+		spawnPosition = transform.position; //new Vector3 (-30, 3, 40);
 
 		// determine which object to spawn
 		int objectToSpawn = Random.Range (0, spawnObjects.Length);

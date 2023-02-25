@@ -115,7 +115,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!96 &3984736738296944923
 TrailRenderer:
   serializedVersion: 2
@@ -236,5 +236,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a827471db46b54cb13d296464e4198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeOut: 2
+  timeOut: 10
   detachChildren: 0

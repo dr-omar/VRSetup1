@@ -83,10 +83,10 @@ public class Assessment2 : MonoBehaviour
         qno = bookKeepQuestions[currentQIndex++];
         //Debug.Log (qno);
         Question.text = currentQIndex.ToString() + ") " + Globals.q2[qno].question;
-        showOption (Globals.q2[qno].option1, new Vector3 (-10, 1.5f, 15));
-        showOption (Globals.q2[qno].option2, new Vector3 (0, 1.5f, 15));
-        showOption (Globals.q2[qno].option3, new Vector3 (10, 1.5f, 15));
-        showOption (Globals.q2[qno].option4, new Vector3 (20, 1.5f, 15));
+        showOption (Globals.q2[qno].option1, new Vector3 (-10f, 1.5f, 15));
+        showOption (Globals.q2[qno].option2, new Vector3 (0.5f, 1.5f, 15));
+        showOption (Globals.q2[qno].option3, new Vector3 (11f, 1.5f, 15));
+        showOption (Globals.q2[qno].option4, new Vector3 (22.5f, 1.5f, 15));
         QuestionPanel.SetActive(true);
     }
     void endAssessment() {
