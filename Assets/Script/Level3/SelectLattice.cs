@@ -38,7 +38,7 @@ public class SelectLattice : MonoBehaviour
         */
     }
     
-    void OnMouseEnter()
+    void OnMouseOver()
     {
         //Debug.Log("name=" + gameObject.name);
         hover = true;
@@ -142,7 +142,7 @@ public class SelectLattice : MonoBehaviour
         //gameObject.GetComponent<MeshRenderer>().enabled = false;
     //}
     
-    public void onHoverEnter ()
+    public void onHoverOver ()
     {
         hover = true;
         //Debug.Log("onHoverEnter " + gameObject.name + " " + hover.ToString());
