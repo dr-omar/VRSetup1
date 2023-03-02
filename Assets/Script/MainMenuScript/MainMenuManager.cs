@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -9,10 +10,18 @@ public class MainMenuManager : MonoBehaviour
     public float spawnDistance = 2;
     public float Height = 0;
     public bool use_height = false;
+    static public bool VRSET;
     // Start is called before the first frame update
     void Start()
     {
-        
+        List<InputDevice> devices = new List<InputDevice>();
+        InputDevices.GetDevices(devices);
+        if (devices.Count == 0) VRSET = false;
+        else VRSET = true;
+        foreach (var item in devices)
+        {
+            Debug.Log(item.name + item.characteristics);
+        }
     }
 
     // Update is called once per frame

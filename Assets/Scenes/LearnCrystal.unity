@@ -9013,6 +9013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropdown: {fileID: 531791792}
+  periodicTable: {fileID: 343291170}
   Lattice:
   - {fileID: 1961612775}
   - {fileID: 905336595}
@@ -25897,6 +25898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropdown: {fileID: 1572201545}
+  periodicTable: {fileID: 0}
   Lattice:
   - {fileID: 1961612775}
   - {fileID: 905336595}
@@ -29815,6 +29817,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f14046de-cc81-47d0-8a0e-c59bf9e080df
     m_ActionName: Player/VerticalRotate[/Keyboard/ctrl]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1722974848}
+        m_TargetAssemblyTypeName: LearnCrystalPlayerController, Assembly-CSharp
+        m_MethodName: PlayerSideMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 873c1a56-11df-4248-9e80-2f496051809f
+    m_ActionName: Player/SideMove[/Keyboard/alt]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -38131,11 +38149,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 119208041816117537, guid: 0ddcec60493a1a7459c36a52c195f58c, type: 3}
       propertyPath: XSensitivity
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 119208041816117537, guid: 0ddcec60493a1a7459c36a52c195f58c, type: 3}
       propertyPath: YSensitivity
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 119208042850033512, guid: 0ddcec60493a1a7459c36a52c195f58c, type: 3}
       propertyPath: m_Name
@@ -38260,11 +38278,11 @@ PrefabInstance:
       objectReference: {fileID: 2089538982}
     - target: {fileID: 1596028042659927698, guid: 19bf2dfce5cfe1a479ab412a473e6fbe, type: 3}
       propertyPath: XSensitivity
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1596028042659927698, guid: 19bf2dfce5cfe1a479ab412a473e6fbe, type: 3}
       propertyPath: YSensitivity
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19bf2dfce5cfe1a479ab412a473e6fbe, type: 3}
@@ -38333,11 +38351,11 @@ PrefabInstance:
       objectReference: {fileID: 2089538982}
     - target: {fileID: 3063469609386061615, guid: a2c804cb5bb97a24d930d70c82850729, type: 3}
       propertyPath: XSensitivity
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3063469609386061615, guid: a2c804cb5bb97a24d930d70c82850729, type: 3}
       propertyPath: YSensitivity
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2c804cb5bb97a24d930d70c82850729, type: 3}
@@ -38354,11 +38372,11 @@ PrefabInstance:
       objectReference: {fileID: 2089538982}
     - target: {fileID: 3072536168417184606, guid: c507bc7fdd14e9a4d846075261261906, type: 3}
       propertyPath: XSensitivity
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3072536168417184606, guid: c507bc7fdd14e9a4d846075261261906, type: 3}
       propertyPath: YSensitivity
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3072536168803775020, guid: c507bc7fdd14e9a4d846075261261906, type: 3}
       propertyPath: m_RootOrder
@@ -38471,11 +38489,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5986852133706331235, guid: db09813caeaabf44c8ae86680e7d4f85, type: 3}
       propertyPath: XSensitivity
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5986852133706331235, guid: db09813caeaabf44c8ae86680e7d4f85, type: 3}
       propertyPath: YSensitivity
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db09813caeaabf44c8ae86680e7d4f85, type: 3}
@@ -38544,11 +38562,11 @@ PrefabInstance:
       objectReference: {fileID: 2089538982}
     - target: {fileID: 6736288856937013516, guid: b42923a8c82697d40a8cb849741c7265, type: 3}
       propertyPath: XSensitivity
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6736288856937013516, guid: b42923a8c82697d40a8cb849741c7265, type: 3}
       propertyPath: YSensitivity
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b42923a8c82697d40a8cb849741c7265, type: 3}
@@ -38621,11 +38639,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8142126853309473772, guid: 9adfad035aaca9a45aa4433b2a2901b3, type: 3}
       propertyPath: XSensitivity
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8142126853309473772, guid: 9adfad035aaca9a45aa4433b2a2901b3, type: 3}
       propertyPath: YSensitivity
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9adfad035aaca9a45aa4433b2a2901b3, type: 3}
